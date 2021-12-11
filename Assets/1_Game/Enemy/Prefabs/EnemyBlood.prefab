@@ -14385,7 +14385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b25ed7f3ca2d249a00d5089ade0af1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startOnEnable: 0
+  _startOnEnable: 1
   _actions:
   - action:
       m_PersistentCalls:

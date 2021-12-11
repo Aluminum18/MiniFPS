@@ -43,7 +43,7 @@ public class EnemyAction : MonoBehaviour
         Observable.TimerFrame(1).Subscribe(_ =>
         {
             var rb = bodyPart.GetComponent<Rigidbody>();
-            rb.AddForce(Vector3.Normalize(bulletDirection) * 5f, ForceMode.Impulse);
+            rb.AddForce(Vector3.Normalize(bulletDirection) * _defeatedForceAmplify, ForceMode.Impulse);
 
             var blood = _bloodSpawner.SpawnAndReturnObject();
             blood.transform.position = rb.position;
@@ -65,6 +65,7 @@ public class EnemyAction : MonoBehaviour
 
     private void OnEnable()
     {
+        _hittable = true;
         _onEnable.Invoke();
     }
 }
