@@ -115,7 +115,7 @@ public class ObjectSpawner : MonoBehaviour
             return;
         }
 
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.red;
         Gizmos.DrawWireCube(_spawnPos.position, _randomRangePos * 2f);
     }
 }
