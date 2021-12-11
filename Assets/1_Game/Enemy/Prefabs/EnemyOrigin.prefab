@@ -2402,6 +2402,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9045502cfa1c2348861ecef8fff6b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _onEnemyDefeated: {fileID: 11400000, guid: 7cd0f5816eb96d44a81c3ed264596f76, type: 2}
   _onEnable:
     m_PersistentCalls:
       m_Calls:
@@ -2524,6 +2525,7 @@ MonoBehaviour:
   _bloodSpawner: {fileID: 7685235755960131799}
   _defeatedForceAmplify: 50
   _hittable: 1
+  _complianceStatus: 0
 --- !u!1 &7190008576669764102
 GameObject:
   m_ObjectHideFlags: 0

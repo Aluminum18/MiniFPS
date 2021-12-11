@@ -17,6 +17,14 @@ public class Referee : MonoBehaviour
     [SerializeField]
     private FloatVariable _remainStatueTime;
 
+    [Header("Events in")]
+    [SerializeField]
+    private GameEvent _onEnemyDefeated;
+
+    [SerializeField]
+    private UnityEvent _onGoodEliminated;
+    [SerializeField]
+    private UnityEvent _onBadEliminated;
     [SerializeField]
     private UnityEvent _onRaisedStatueCommand;
     [SerializeField]
@@ -71,5 +79,28 @@ public class Referee : MonoBehaviour
 
             _remainStatueTime.Value -= Time.deltaTime;
         });
+    }
+
+    private void ValidateDefeatedEnemy(object[] args)
+    {
+        var status = (EnemyRuleComplianceStatus)args[0];
+
+        if (EnemyRuleComplianceStatus.Good.Equals(status))
+        {
+            _onBadEliminated.Invoke();
+            return;
+        }
+
+        _onGoodEliminated.Invoke();
+    }
+
+    private void OnEnable()
+    {
+        _onEnemyDefeated.Subcribe(ValidateDefeatedEnemy);
+    }
+
+    private void OnDisable()
+    {
+        _onEnemyDefeated.Unsubcribe(ValidateDefeatedEnemy);
     }
 }

@@ -7,6 +7,10 @@ using UnityEngine.Events;
 
 public class EnemyAction : MonoBehaviour
 {
+    [Header("Events out")]
+    [SerializeField]
+    private GameEvent _onEnemyDefeated;
+
     [SerializeField]
     private UnityEvent _onEnable;
     [SerializeField]
@@ -42,6 +46,8 @@ public class EnemyAction : MonoBehaviour
             _hittable = value;
         }
     }
+    [SerializeField]
+    private EnemyRuleComplianceStatus _complianceStatus;
 
     public void StartPlayGame()
     {
@@ -63,14 +69,16 @@ public class EnemyAction : MonoBehaviour
 
     public void CancelStatue()
     {
+        _complianceStatus = EnemyRuleComplianceStatus.Good;
         _animator.speed = 1f;
         _onCanceledStatue.Invoke();
     }
 
     public void FailedToDoStatue()
     {
-        int roll = UnityEngine.Random.Range(1, 4);
+        _complianceStatus = EnemyRuleComplianceStatus.Violated;
 
+        int roll = UnityEngine.Random.Range(1, 4);
         _animator.Play("IdleDynamic " + roll.ToString());
 
         _onFailedToDoStatue.Invoke();
@@ -86,6 +94,7 @@ public class EnemyAction : MonoBehaviour
         _hittable = false;
 
         _onDefeated.Invoke();
+        _onEnemyDefeated.Raise(_complianceStatus);
 
         Observable.TimerFrame(1).Subscribe(_ =>
         {
@@ -112,8 +121,16 @@ public class EnemyAction : MonoBehaviour
 
     private void OnEnable()
     {
+        _complianceStatus = EnemyRuleComplianceStatus.Good;
+
         _hittable = true;
         _animator.speed = 1f;
         _onEnable.Invoke();
     }
+}
+
+public enum EnemyRuleComplianceStatus
+{
+    Good = 0,
+    Violated = 1
 }
