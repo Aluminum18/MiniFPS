@@ -13,9 +13,11 @@ public class CharacterRagDollActivate : MonoBehaviour
 
     public void ActiveRagDoll(bool active)
     {
-        ActiveColliderAndRb(active);
         _chaCon.enabled = !active;
         _animator.enabled = !active;
+
+        ActiveColliderAndRb(active);
+
     }
 
     private void ActiveColliderAndRb(bool active)

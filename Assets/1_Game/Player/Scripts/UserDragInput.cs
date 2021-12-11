@@ -34,8 +34,9 @@ public class UserDragInput : MonoBehaviour, IPointerDownHandler, IDragHandler
     {
         _dragDelta = _invertDrag ? -eventData.delta : eventData.delta;
 
-        _cameraXRotate.Rotate(-_dragDelta.y * _verticalDegreePerPixel * Time.deltaTime, 0f, 0f);
         _cameraYRotate.Rotate(0f, _dragDelta.x * _horizonDegreePerPixel * Time.deltaTime, 0f);
+
+        _cameraXRotate.Rotate(-_dragDelta.y * _verticalDegreePerPixel * Time.deltaTime, 0f, 0f);
     }
 
     public void SetInvertDrag(bool invert)
