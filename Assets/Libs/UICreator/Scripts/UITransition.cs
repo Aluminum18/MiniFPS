@@ -92,7 +92,7 @@ public class UITransition : MonoBehaviour
 
     public void ShowTransition()
     {
-        _onStartHide.Invoke();
+        _onStartShow.Invoke();
         Observable.Timer(System.TimeSpan.FromSeconds(_showTransitionTime)).Subscribe(_ =>
         {
             _onFinishShow.Invoke();
