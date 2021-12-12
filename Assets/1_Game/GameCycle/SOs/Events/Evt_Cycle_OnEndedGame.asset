@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Evt_Cycle_OnEndedGame
   m_EditorClassIdentifier: 
   _eventExplanation: 
-  _logWhenRaise: 0
+  _logWhenRaise: 1
   _subcribers: []

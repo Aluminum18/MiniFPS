@@ -41,12 +41,12 @@ public class BulletRay : MonoBehaviour
         for (int i = 0; i < hits.Length; i++)
         {
             var hit = hits[i];
-            hit.collider.GetComponent<PhysicsEventBridge>()?.TriggerByCast(aimRay.direction);
-
             if (hit.collider.gameObject.layer == 6) // Enemy
             {
                 isHitEnemy = true;
             }
+
+            hit.collider.GetComponent<PhysicsEventBridge>()?.TriggerByCast(aimRay.direction);
         }
 
         if (isHitEnemy)

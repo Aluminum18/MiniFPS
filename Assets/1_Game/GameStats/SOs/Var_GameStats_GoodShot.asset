@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52644d92cbc54a844a0755550dbce979, type: 3}
   m_Name: Var_GameStats_GoodShot
   m_EditorClassIdentifier: 
-  Explanation: 
-  _value: 0.8
+  Explanation: Ratio of good elimination
+  _value: 0
   _defaultValue: 0
   _valueWhenInit: 1
