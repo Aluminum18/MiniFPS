@@ -25,6 +25,8 @@ public class EnemyAction : MonoBehaviour
     private UnityEvent _onCanceledStatue;
     [SerializeField]
     private UnityEvent _onDefeated;
+    [SerializeField]
+    private UnityEvent _onDisable;
 
     [Header("Config")]
     [SerializeField][Range(0f, 1f)]
@@ -126,6 +128,11 @@ public class EnemyAction : MonoBehaviour
         _hittable = true;
         _animator.speed = 1f;
         _onEnable.Invoke();
+    }
+
+    private void OnDisable()
+    {
+        _onDisable.Invoke();
     }
 }
 

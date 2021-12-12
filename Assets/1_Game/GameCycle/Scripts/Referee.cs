@@ -12,6 +12,8 @@ public class Referee : MonoBehaviour
     private FloatVariable _timeToNextStatue;
     [SerializeField]
     private FloatVariable _statuePeriod;
+    [SerializeField]
+    private IntegerVariable _remainEnemies;
 
     [Header("Reference - Write")]
     [SerializeField]
@@ -29,6 +31,8 @@ public class Referee : MonoBehaviour
     private UnityEvent _onRaisedStatueCommand;
     [SerializeField]
     private UnityEvent _onEndStatuePeriod;
+    [SerializeField]
+    private UnityEvent _onEndedGame;
 
     [Header("Config")]
     [SerializeField]
@@ -58,12 +62,15 @@ public class Referee : MonoBehaviour
         _onEndStatuePeriod.Invoke();
     }
 
+    public void EndGame()
+    {
+        _countStatueTimeStream?.Dispose();
+        _onEndedGame.Invoke();
+    }
+
     private void CountStatuePeriod()
     {
-        if (_countStatueTimeStream != null)
-        {
-            _countStatueTimeStream.Dispose();
-        }
+        _countStatueTimeStream?.Dispose();
 
         _remainStatueTime.Value = _statuePeriod.Value;
 
@@ -94,13 +101,27 @@ public class Referee : MonoBehaviour
         _onGoodEliminated.Invoke();
     }
 
+    private void TrackRemainEnemies(int remainEnemies)
+    {
+        if (remainEnemies > 0)
+        {
+            return;
+        }
+
+        EndGame();
+    }
+
     private void OnEnable()
     {
         _onEnemyDefeated.Subcribe(ValidateDefeatedEnemy);
+        _remainEnemies.OnValueChange += TrackRemainEnemies;
     }
 
     private void OnDisable()
     {
         _onEnemyDefeated.Unsubcribe(ValidateDefeatedEnemy);
+        _remainEnemies.OnValueChange -= TrackRemainEnemies;
+
+        _countStatueTimeStream?.Dispose();
     }
 }
