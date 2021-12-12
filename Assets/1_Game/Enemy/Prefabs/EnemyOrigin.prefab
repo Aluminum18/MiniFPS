@@ -1109,6 +1109,7 @@ GameObject:
   - component: {fileID: 2378353521779651162}
   - component: {fileID: 2378353521770585492}
   - component: {fileID: 51795862691383032}
+  - component: {fileID: 7358686330534873781}
   m_Layer: 0
   m_Name: EnemyOrigin
   m_TagString: Untagged
@@ -1169,6 +1170,46 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.43, z: 0}
+--- !u!114 &7358686330534873781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2378353521779945018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe960c8db05e78d45a8585b854e460aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _contactMask:
+    serializedVersion: 2
+    m_Bits: 512
+  _onTriggerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2378353521779945018}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  _onTriggerEnterT:
+    m_PersistentCalls:
+      m_Calls: []
+  _onTriggerEnterT1T2:
+    m_PersistentCalls:
+      m_Calls: []
+  _onRayCastTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  _recentlyContact: {fileID: 0}
 --- !u!1 &2378353521779945024
 GameObject:
   m_ObjectHideFlags: 0

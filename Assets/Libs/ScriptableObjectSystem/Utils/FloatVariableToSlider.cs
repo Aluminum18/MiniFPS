@@ -9,15 +9,27 @@ public class FloatVariableToSlider : MonoBehaviour
     private FloatVariable _float;
     [SerializeField]
     private Slider _slider;
+    [SerializeField]
+    private bool _getInitValueOnly = false;
 
     private void Start()
     {
-        _float.OnValueChange += UpdateSliderValue;
         _slider.value = _float.Value;
+        if (_getInitValueOnly)
+        {
+            return;
+        }
+
+        _float.OnValueChange += UpdateSliderValue;
     }
 
     private void OnDestroy()
     {
+        if (_getInitValueOnly)
+        {
+            return;
+        }
+
         _float.OnValueChange -= UpdateSliderValue;
     }
 

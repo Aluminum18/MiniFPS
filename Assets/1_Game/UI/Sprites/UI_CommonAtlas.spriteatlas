@@ -44,15 +44,29 @@ SpriteAtlas:
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: d6d37729f5e33fb4983b1bc4e11b3723, type: 3}
-    totalSpriteSurfaceArea: 62500
+    totalSpriteSurfaceArea: 2301018
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 21300000, guid: 5a9ad330e44eeb94bb75b9c973c097ff, type: 3}
   - {fileID: 21300000, guid: 34e1b6f3b7961ff4197ed9ff6e0d9ae2, type: 3}
+  - {fileID: 21300000, guid: c1a4e1b848529c04a84a150556bae4ba, type: 3}
+  - {fileID: 21300000, guid: 4f6781796f761ab44aeb247c20d18ced, type: 3}
+  - {fileID: 21300000, guid: 6f6d186acc782234995d7be3af2f99ad, type: 3}
+  - {fileID: 21300000, guid: 5e4cd13dc0a70c54d8d44fb7c033af33, type: 3}
+  - {fileID: 21300000, guid: c10a449e9a2348541bb9ebb904e2cef9, type: 3}
+  - {fileID: 21300000, guid: 36d44d3f6ac0afa4fb7e44e3e1aef82e, type: 3}
   m_PackedSpriteNamesToIndex:
+  - ammo-icon-20
   - circle
+  - decor BG
+  - assault_rifle_01_icon
+  - lot patch
+  - scope 1
+  - btn_ad
+  - talk balloon patch
   m_RenderDataMap: {}
   m_Tag: UI_CommonAtlas
   m_IsVariant: 0
