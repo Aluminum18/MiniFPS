@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BulletRay : MonoBehaviour
 {
@@ -34,7 +35,8 @@ public class BulletRay : MonoBehaviour
 
         for (int i = 0; i < hits.Length; i++)
         {
-            hits[i].collider.GetComponent<PhysicsEventBridge>()?.TriggerByCast(aimRay.direction);
+            var hit = hits[i];
+            hit.collider.GetComponent<PhysicsEventBridge>()?.TriggerByCast(aimRay.direction);
         }
     }
 }

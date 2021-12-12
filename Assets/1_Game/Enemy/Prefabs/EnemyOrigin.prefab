@@ -2530,7 +2530,19 @@ MonoBehaviour:
         m_CallState: 2
   _onFailedToDoStatue:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 053558b33ef75734bb404b1b7270ad72, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _onCanceledStatue:
     m_PersistentCalls:
       m_Calls:
@@ -2605,6 +2617,7 @@ MonoBehaviour:
   _bloodSpawner: {fileID: 7685235755960131799}
   _defeatedForceAmplify: 50
   _hittable: 1
+  _isPlaying: 0
   _complianceStatus: 0
 --- !u!1 &7190008576669764102
 GameObject:
@@ -2813,3 +2826,18 @@ MonoBehaviour:
   - {fileID: 957677306458539697}
   _chaCon: {fileID: 51795862691383032}
   _animator: {fileID: 2378353521770585492}
+  _onActiveRagDoll:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 649242210087164003}
+        m_TargetAssemblyTypeName: CharacterRagDollActivate, Assembly-CSharp
+        m_MethodName: SwitchLayer
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

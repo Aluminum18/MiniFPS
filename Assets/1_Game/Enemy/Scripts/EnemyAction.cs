@@ -49,6 +49,8 @@ public class EnemyAction : MonoBehaviour
         }
     }
     [SerializeField]
+    private bool _isPlaying = false;
+    [SerializeField]
     private EnemyRuleComplianceStatus _complianceStatus;
 
     public void StartPlayGame()
@@ -59,6 +61,12 @@ public class EnemyAction : MonoBehaviour
     public void DoStatue()
     {
         _onHeardStatueCommand.Invoke();
+
+        if (!_isPlaying)
+        {
+            return;
+        }
+
         float roll = UnityEngine.Random.Range(0f, 1f);
         if  (roll < _failedToDoStatueRatio)
         {
@@ -94,6 +102,7 @@ public class EnemyAction : MonoBehaviour
         }
 
         _hittable = false;
+        _isPlaying = false;
 
         _onDefeated.Invoke();
         _onEnemyDefeated.Raise(_complianceStatus);
@@ -126,6 +135,8 @@ public class EnemyAction : MonoBehaviour
         _complianceStatus = EnemyRuleComplianceStatus.Good;
 
         _hittable = true;
+        _isPlaying = true;
+
         _animator.speed = 1f;
         _onEnable.Invoke();
     }

@@ -13,7 +13,7 @@ public class ScopeAdjust : MonoBehaviour
 
     private void UpdateScope(float scopeValue)
     {
-        _scopeCamera.m_Lens.FieldOfView = Mathf.Lerp(2f, 15f, _scopeZoomValue.Value);
+        _scopeCamera.m_Lens.FieldOfView = Mathf.Lerp(15f, 2f, _scopeZoomValue.Value);
     }
 
     private void OnEnable()
