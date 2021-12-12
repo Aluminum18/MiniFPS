@@ -906,7 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5185,6 +5185,34 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 223514016766970513, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223514016766970513, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 223514016766970513, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 8332235300638195211}
+    - target: {fileID: 223514016766970513, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 223514016766970513, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadRequestedScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 223514016766970513, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneLoader, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 223514016766970513, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
 --- !u!114 &831076951174885662 stripped
@@ -5196,6 +5224,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e763f5b5fb369114a97a6ccc9e2ce58a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8332235300638195211 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8876747806440431253, guid: be349ac7892a3304cb89f4eb1d762654, type: 3}
+  m_PrefabInstance: {fileID: 617697683777151134}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43a14df9cbe03cc44bf506d28c2a051e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &831076951174885651 stripped
