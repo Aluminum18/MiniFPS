@@ -67,6 +67,11 @@ public class Referee : MonoBehaviour
     {
         Observable.Timer(TimeSpan.FromSeconds(UnityEngine.Random.Range(0f, 4f))).Subscribe(_ =>
         {
+            if (_isGameEnded)
+            {
+                return;
+            }
+
             CountStatuePeriod();
             _onRaisedStatueCommand.Invoke();
         });
