@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 52644d92cbc54a844a0755550dbce979, type: 3}
-  m_Name: Var_GameStats_Detection
+  m_Name: Var_GameStats_DetectionForView
   m_EditorClassIdentifier: 
-  Explanation: 
-  _value: 0.3
+  Explanation: DONT rely on this as trusted data, used for showing animation only
+  _value: 0
   _defaultValue: 0
   _valueWhenInit: 1
