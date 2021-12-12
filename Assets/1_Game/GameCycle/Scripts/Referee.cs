@@ -14,10 +14,18 @@ public class Referee : MonoBehaviour
     private FloatVariable _statuePeriod;
     [SerializeField]
     private IntegerVariable _remainEnemies;
+    [SerializeField]
+    private FloatVariable _accuracy;
+    [SerializeField]
+    private FloatVariable _goodShot;
+    [SerializeField]
+    private FloatVariable _detection;
 
     [Header("Reference - Write")]
     [SerializeField]
     private FloatVariable _remainStatueTime;
+    [SerializeField]
+    private StringVariable _finalResult;
 
     [Header("Events in")]
     [SerializeField]
@@ -38,12 +46,19 @@ public class Referee : MonoBehaviour
     [SerializeField]
     private float _maxDelayStatueCommand = 4f;
 
+    private bool _isGameEnded = false;
+
     private IDisposable _countStatueTimeStream;
 
     public void StartTrackNextStatue()
     {
         Observable.Timer(TimeSpan.FromSeconds(_timeToNextStatue.Value)).Subscribe(_ =>
         {
+            if (_isGameEnded)
+            {
+                return;
+            }
+
             RaiseStatueCommand();
         });
     }
@@ -64,8 +79,26 @@ public class Referee : MonoBehaviour
 
     public void EndGame()
     {
+        _isGameEnded = true;
         _countStatueTimeStream?.Dispose();
         _onEndedGame.Invoke();
+    }
+
+    public void JudgeResult()
+    {
+        Observable.Timer(TimeSpan.FromSeconds(1.2f)).Subscribe(_ =>
+        {
+            if (_accuracy.Value < 0.8f
+                || _goodShot.Value < 0.8f
+                || _detection.Value < 0.5f)
+            {
+                _finalResult.Value = "You've been fired!";
+                return;
+            }
+
+            _finalResult.Value = "Good job!";
+        });
+
     }
 
     private void CountStatuePeriod()

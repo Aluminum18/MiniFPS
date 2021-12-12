@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Var_GameStats_GoodShot
   m_EditorClassIdentifier: 
   Explanation: Ratio of good elimination
-  _value: 0
+  _value: 1
   _defaultValue: 0
   _valueWhenInit: 1

@@ -1901,6 +1901,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: 6116fb96fbfff5d4c91a19b0bc3e13fa, type: 2}
+        m_TargetAssemblyTypeName: BaseScriptableObjectVariable`1[[System.String,
+          mscorlib
+        m_MethodName: set_Value
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1420880451
 GameObject:
   m_ObjectHideFlags: 0
@@ -2886,7 +2899,11 @@ MonoBehaviour:
   _timeToNextStatue: {fileID: 11400000, guid: dabc0480d3b894e40a43568047d5053f, type: 2}
   _statuePeriod: {fileID: 11400000, guid: 217f57ab2aa5b144185597f296a1f127, type: 2}
   _remainEnemies: {fileID: 11400000, guid: 1ef6aab5e9e059f4db003a43faf10107, type: 2}
+  _accuracy: {fileID: 11400000, guid: c90c734144d29b04ab8e0c1478a6aa48, type: 2}
+  _goodShot: {fileID: 11400000, guid: d51d41858cd896c4193aca8bcc02f20e, type: 2}
+  _detection: {fileID: 11400000, guid: 5c89fee1a4be6c14eb9ec68b0ac80454, type: 2}
   _remainStatueTime: {fileID: 11400000, guid: 8610769f028c309438c7d3b39c7d4092, type: 2}
+  _finalResult: {fileID: 11400000, guid: 6116fb96fbfff5d4c91a19b0bc3e13fa, type: 2}
   _onEnemyDefeated: {fileID: 11400000, guid: 7cd0f5816eb96d44a81c3ed264596f76, type: 2}
   _onGoodEliminated:
     m_PersistentCalls:
@@ -3441,6 +3458,34 @@ PrefabInstance:
     - target: {fileID: 831076950705560368, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 831076950858677228, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
+      propertyPath: _onFinishShow.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831076950858677228, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
+      propertyPath: _onFinishShow.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 831076950858677228, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
+      propertyPath: _onFinishShow.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1967760204}
+    - target: {fileID: 831076950858677228, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
+      propertyPath: _onFinishShow.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 831076950858677228, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
+      propertyPath: _onFinishShow.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: JudgeResult
+      objectReference: {fileID: 0}
+    - target: {fileID: 831076950858677228, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
+      propertyPath: _onFinishShow.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: Referee, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 831076950858677228, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
+      propertyPath: _onFinishShow.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 831076951029246564, guid: 09602c46bbf9b3f49a645aa54e926e91, type: 3}
       propertyPath: _cameraXRotate
