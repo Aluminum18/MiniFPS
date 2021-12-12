@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class SceceSwitch : MonoBehaviour
 {
-    private const string SCENE_PATH = "Assets/1_GunFightGame/Scenes/";
+    private const string SCENE_PATH = "Assets/1_Game/Scenes/";
     private const string GAME_FIELD_SCENE = "GameField.unity";
-    private const string TITLE_SCENE = "TitleScene.unity";
+    private const string TITLE_SCENE = "Title.unity";
     private const string BUFFER_SCENE = "BufferScene.unity";
 
     [MenuItem("ChangeScene/GameField")]
