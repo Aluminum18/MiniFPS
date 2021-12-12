@@ -822,6 +822,70 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scopeZoomValue: {fileID: 11400000, guid: f7f3fcf0cb7023343b893a8c96e21477, type: 2}
   _scopeCamera: {fileID: 510416415}
+--- !u!1 &307895139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 307895140}
+  - component: {fileID: 307895141}
+  m_Layer: 5
+  m_Name: InitOpen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &307895140
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307895139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1149712157}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &307895141
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 307895139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eaa21eca27677614d84f5f12a6ea6688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameEvent: {fileID: 11400000, guid: 1417b0a8d976dac4a9b99e24b502555f, type: 2}
+  _handler:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1149712160}
+        m_TargetAssemblyTypeName: UIPanel, Assembly-CSharp
+        m_MethodName: Open
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &315862449
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,7 +1354,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 385891257}
-  - component: {fileID: 385891258}
+  - component: {fileID: 385891259}
   m_Layer: 0
   m_Name: StartSpawn
   m_TagString: Untagged
@@ -1312,7 +1376,7 @@ Transform:
   m_Father: {fileID: 2128455126}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &385891258
+--- !u!114 &385891259
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1321,16 +1385,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 385891256}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eaa21eca27677614d84f5f12a6ea6688, type: 3}
+  m_Script: {fileID: 11500000, guid: d0abc486abfe2cd4a8bf279d5fd5f7de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _gameEvent: {fileID: 11400000, guid: b4bd59d63901bfb4aba5506a779ae547, type: 2}
+  _gameEvents:
+  - {fileID: 11400000, guid: b4bd59d63901bfb4aba5506a779ae547, type: 2}
+  - {fileID: 11400000, guid: ded390cf71bf5c1458a1cd89d27bc4e7, type: 2}
   _handler:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1696860873}
         m_TargetAssemblyTypeName: IntervalAction, Assembly-CSharp
-        m_MethodName: StartIntervalAction
+        m_MethodName: StopIntervalAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3024,6 +3090,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1149712160}
+        m_TargetAssemblyTypeName: UIPanel, Assembly-CSharp
+        m_MethodName: Close
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &881552918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3783,6 +3861,7 @@ RectTransform:
   m_Children:
   - {fileID: 1975265400}
   - {fileID: 463169407}
+  - {fileID: 307895140}
   m_Father: {fileID: 1267174106}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4251,6 +4330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _shotCount: {fileID: 11400000, guid: 26978108b2b7bed4b9c51a02e8e6da32, type: 2}
+  _hitShotCount: {fileID: 11400000, guid: ddc397e2844328b48a774d012d82c7fa, type: 2}
   _goodShotCount: {fileID: 11400000, guid: e5a09e3ee296a664ab92162e40abb288, type: 2}
   _badShotCount: {fileID: 11400000, guid: 7e037c14cc4c00045bb292096b886bdc, type: 2}
   _violatedEnemyCount: {fileID: 11400000, guid: e6f2a2f652f09bd4cb96016554d4676b, type: 2}
@@ -4324,6 +4404,18 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: 4b73b70ecc8a52943b987346a1186b56, type: 2}
+        m_TargetAssemblyTypeName: BaseScriptableObjectVariable`1[[System.Int32, mscorlib
+        m_MethodName: set_Value
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 11400000, guid: ddc397e2844328b48a774d012d82c7fa, type: 2}
         m_TargetAssemblyTypeName: BaseScriptableObjectVariable`1[[System.Int32, mscorlib
         m_MethodName: set_Value
         m_Mode: 3

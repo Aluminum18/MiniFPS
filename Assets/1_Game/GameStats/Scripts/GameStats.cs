@@ -9,6 +9,8 @@ public class GameStats : MonoBehaviour
     [SerializeField]
     private IntegerVariable _shotCount;
     [SerializeField]
+    private IntegerVariable _hitShotCount;
+    [SerializeField]
     private IntegerVariable _goodShotCount;
     [SerializeField]
     private IntegerVariable _badShotCount;
@@ -48,7 +50,7 @@ public class GameStats : MonoBehaviour
             return;
         }
 
-        _accuracy.Value = (float)(_goodShotCount.Value + _badShotCount.Value) / _shotCount.Value;
+        _accuracy.Value = (float)(_hitShotCount.Value) / _shotCount.Value;
         _goodShot.Value = (float)_goodShotCount.Value / (_goodShotCount.Value + _badShotCount.Value);
     }
 

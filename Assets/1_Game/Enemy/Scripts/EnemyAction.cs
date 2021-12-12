@@ -113,7 +113,7 @@ public class EnemyAction : MonoBehaviour
             rb.AddForce(Vector3.Normalize(bulletDirection) * _defeatedForceAmplify, ForceMode.Impulse);
 
             var blood = _bloodSpawner.SpawnAndReturnObject();
-            blood.transform.position = rb.position;
+            blood.transform.position = rb.transform.position;
         });
 
 

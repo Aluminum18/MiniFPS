@@ -2359,7 +2359,7 @@ GameObject:
   - component: {fileID: 8466573834109835784}
   - component: {fileID: 7685235755960131799}
   m_Layer: 6
-  m_Name: BloodySpawner
+  m_Name: BloodSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2813,6 +2813,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidBodies:
+  - {fileID: 817619041821252156}
   - {fileID: 6337019799932087434}
   - {fileID: 4747562233306262520}
   - {fileID: 7723093227331869496}

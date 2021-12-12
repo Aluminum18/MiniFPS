@@ -16,6 +16,9 @@ public class BulletRay : MonoBehaviour
     [SerializeField]
     private LayerMask _hitLayer;
 
+    [SerializeField]
+    private UnityEvent _onHitAnEnemy;
+
     public void CastBulletRay()
     {
         CrosshairToAimPoint();
@@ -33,10 +36,22 @@ public class BulletRay : MonoBehaviour
             return;
         }
 
+        bool isHitEnemy = false;
+
         for (int i = 0; i < hits.Length; i++)
         {
             var hit = hits[i];
             hit.collider.GetComponent<PhysicsEventBridge>()?.TriggerByCast(aimRay.direction);
+
+            if (hit.collider.gameObject.layer == 6) // Enemy
+            {
+                isHitEnemy = true;
+            }
+        }
+
+        if (isHitEnemy)
+        {
+            _onHitAnEnemy.Invoke();
         }
     }
 }
