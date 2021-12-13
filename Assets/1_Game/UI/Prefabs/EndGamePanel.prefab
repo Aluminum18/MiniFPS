@@ -1893,7 +1893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_text
-      value: Good Shot
+      value: Right Elimination
       objectReference: {fileID: 0}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_fontColor.b

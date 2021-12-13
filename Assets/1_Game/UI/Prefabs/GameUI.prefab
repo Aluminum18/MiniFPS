@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Good Job!
+  m_text: Good Shot!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -5530,7 +5530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 644629553297071908, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -340
+      value: -283.5871
       objectReference: {fileID: 0}
     - target: {fileID: 644629553297071908, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5566,7 +5566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 644629553297071908, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 80
+      value: 75.45056
       objectReference: {fileID: 0}
     - target: {fileID: 644629553297071908, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5582,7 +5582,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_text
-      value: This is instruction
+      value: "- You are the guard of Squid game\n- Shoot those making move during
+        <color=\"blue\">Statue time</color> \n- And meet ALL below targets:\r\n\t80%
+        shooting accuracy\r\n\t80% right elimination\r\n\t50% detection\n<color=\"red\">Note:
+        Bullets can penetrate multiple tartgets"
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
+      propertyPath: m_fontSize
+      value: 42
       objectReference: {fileID: 0}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_fontColor.b
@@ -5597,12 +5604,24 @@ PrefabInstance:
       value: 0.75294125
       objectReference: {fileID: 0}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4283257024
       objectReference: {fileID: 0}
+    - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5773902956886901553, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_Name
-      value: Text
+      value: InstructText
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
