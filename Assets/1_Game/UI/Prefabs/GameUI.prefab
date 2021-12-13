@@ -5585,7 +5585,7 @@ PrefabInstance:
       value: "- You are the guard of Squid game\n- Shoot those making move during
         <color=\"blue\">Statue time</color> \n- And meet ALL below targets:\r\n\t80%
         shooting accuracy\r\n\t80% right elimination\r\n\t50% detection\n<color=\"red\">Note:
-        Bullets can penetrate multiple tartgets"
+        Bullet can penetrate multiple targets"
       objectReference: {fileID: 0}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_fontSize

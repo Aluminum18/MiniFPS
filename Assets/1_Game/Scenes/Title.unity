@@ -765,7 +765,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_text
-      value: VNG Test
+      value: Squid game
       objectReference: {fileID: 0}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_fontSize
@@ -790,7 +790,7 @@ PrefabInstance:
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_sharedMaterial
       value: 
-      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+      objectReference: {fileID: 2100000, guid: d0dee1aa9822dc24e92941c06ccf6096, type: 2}
     - target: {fileID: 4910714923341966891, guid: 4ad78488b30883245afbda153473a8fc, type: 3}
       propertyPath: m_fontColor32.rgba
       value: 4280374762
