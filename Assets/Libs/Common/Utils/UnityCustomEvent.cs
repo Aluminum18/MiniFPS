@@ -15,11 +15,14 @@ public class Unity2GameObjectsEvent : UnityEvent<GameObject, GameObject>
 
 }
 
-/// <summary>
-/// Vector3 = cast direction, Collider = be casted Collider
-/// </summary>
 [System.Serializable]
 public class UnityRaycastEvent : UnityEvent<Vector3, Collider>
+{
+
+}
+
+[System.Serializable]
+public class Unity3Vector3Event : UnityEvent<Vector3>
 {
 
 }

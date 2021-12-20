@@ -26,6 +26,12 @@ public class ObjectSpawner : MonoBehaviour
         SetupObjectTransform(go);
     }
 
+    public void Spawn(Vector3 position)
+    {
+        var go = SpawnAndReturnObject();
+        go.transform.position = position;
+    }
+
     public void SpawnRandomObject()
     {
         SpawnRandomAndReturnObject();

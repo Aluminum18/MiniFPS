@@ -15,6 +15,8 @@ public class PhysicsEventBridge : MonoBehaviour
     private Unity2GameObjectsEvent _onTriggerEnterT1T2;
     [SerializeField]
     private UnityRaycastEvent _onRayCastTrigger;
+    [SerializeField]
+    private Unity3Vector3Event _onRayCastTrigger2;
 
     [Header("Inspec")]
     [SerializeField]
@@ -24,6 +26,11 @@ public class PhysicsEventBridge : MonoBehaviour
     public void TriggerByCast(Vector3 castDirection)
     {
         _onRayCastTrigger.Invoke(castDirection, GetComponent<Collider>());
+    }
+
+    public void TriggerByCast2(Vector3 hitPosition)
+    {
+        _onRayCastTrigger2.Invoke(hitPosition);
     }
 
     private void OnTriggerEnter(Collider collision)

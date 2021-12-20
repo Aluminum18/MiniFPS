@@ -46,7 +46,9 @@ public class BulletRay : MonoBehaviour
                 isHitEnemy = true;
             }
 
-            hit.collider.GetComponent<PhysicsEventBridge>()?.TriggerByCast(aimRay.direction);
+            var eventBridge = hit.collider.GetComponent<PhysicsEventBridge>();
+            eventBridge.TriggerByCast(aimRay.direction);
+            eventBridge.TriggerByCast2(hit.point);
         }
 
         if (isHitEnemy)
