@@ -151,6 +151,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &1816765327021284294
 BoxCollider:
@@ -301,6 +304,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &3481302288292527003
 BoxCollider:
@@ -451,6 +457,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &1257032409995051986
 BoxCollider:
@@ -601,6 +610,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &6977719080126617822
 BoxCollider:
@@ -766,6 +778,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!1 &2378353521779945012
 GameObject:
@@ -903,6 +918,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &235435753836856613
 BoxCollider:
@@ -1053,6 +1071,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &3023865728066417581
 BoxCollider:
@@ -1207,6 +1228,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   _onRayCastTrigger:
+    m_PersistentCalls:
+      m_Calls: []
+  _onRayCastTrigger2:
     m_PersistentCalls:
       m_Calls: []
   _recentlyContact: {fileID: 0}
@@ -1376,6 +1400,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &5030932000596535351
 BoxCollider:
@@ -1586,6 +1613,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &4085739228286135300
 BoxCollider:
@@ -1736,6 +1766,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!65 &1247388749972027006
 BoxCollider:
@@ -1854,6 +1887,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!1 &2378353521779945044
 GameObject:
@@ -2105,6 +2141,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  _onRayCastTrigger2:
+    m_PersistentCalls:
+      m_Calls: []
   _recentlyContact: {fileID: 0}
 --- !u!1 &2378353521779945048
 GameObject:

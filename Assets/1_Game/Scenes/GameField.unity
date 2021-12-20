@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 112000000, guid: aebb6e20c18717b4db387bc7789004e4, type: 2}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 8a469662f40c7994ab25d901675d3bb5, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1066,7 +1066,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &690775172
 Light:
   m_ObjectHideFlags: 0
@@ -1544,14 +1544,6 @@ PrefabInstance:
     - target: {fileID: 2378353521779945018, guid: 348169d4dc0cf614dbf8a0d17470e7d7, type: 3}
       propertyPath: m_Name
       value: EnemyOrigin
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378353521779945018, guid: 348169d4dc0cf614dbf8a0d17470e7d7, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2803874645388288268, guid: 348169d4dc0cf614dbf8a0d17470e7d7, type: 3}
-      propertyPath: _speed
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3235176258736509263, guid: 348169d4dc0cf614dbf8a0d17470e7d7, type: 3}
       propertyPath: m_ConnectedAnchor.x
