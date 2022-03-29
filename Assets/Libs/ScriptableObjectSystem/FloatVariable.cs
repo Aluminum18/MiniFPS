@@ -20,4 +20,9 @@ public class FloatVariable : BaseScriptableObjectVariable<float>
             return _change;
         }
     }
+
+    public void SetValueFromInputSystem(UnityEngine.InputSystem.InputAction.CallbackContext context)
+    {
+        Value = context.ReadValue<float>();
+    }
 }
